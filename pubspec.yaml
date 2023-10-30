@@ -1,6 +1,6 @@
 name: splash_module_flutter
 description: Modui.
-version: 0.0.1
+version: 0.8.0
 homepage:
 
 environment:
@@ -12,12 +12,12 @@ dependencies:
     sdk: flutter
 
   flutter_modular: ^6.3.2
-  flutter_svg: ^1.1.6
+  flutter_svg: ^2.0.8
   
 dev_dependencies:
   flutter_test:
     sdk: flutter
     
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.3
 
 flutter:

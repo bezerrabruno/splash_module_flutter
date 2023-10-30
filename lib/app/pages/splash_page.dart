@@ -43,7 +43,7 @@ class _SplashPageState extends State<SplashPage> {
       body: Center(
         child: SvgPicture.asset(
           widget.logo,
-          height: size.height / 3,
+          height: size.height / 5,
           fit: BoxFit.fitHeight,
         ),
       ),
