@@ -5,18 +5,18 @@ import 'package:splash_module_flutter/app/controllers/splash_controller.dart';
 class SplashPage extends StatefulWidget {
   final SplashController controller;
 
-  final Function action;
+  final Function? action;
   final String logo;
   final String route;
-  final Duration time;
+  final Duration? time;
 
   const SplashPage(
     this.controller, {
     super.key,
-    required this.action,
+    this.action,
     required this.logo,
     required this.route,
-    required this.time,
+    this.time,
   });
 
   @override

@@ -2,13 +2,15 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 class SplashController {
   init(
-    Function action,
+    Function? action,
     String route,
-    Duration time,
+    Duration? time,
   ) async {
-    await Future.delayed(time);
+    await Future.delayed(time ?? const Duration(seconds: 2));
 
-    await action();
+    if (action != null) {
+      await action();
+    }
 
     Modular.to.navigate(route);
   }

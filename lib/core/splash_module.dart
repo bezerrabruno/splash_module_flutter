@@ -3,16 +3,16 @@ import 'package:splash_module_flutter/app/controllers/splash_controller.dart';
 import 'package:splash_module_flutter/app/pages/splash_page.dart';
 
 class SplashModule extends Module {
-  final Function action;
+  final Function? action;
   final String logo;
   final String route;
-  final Duration time;
+  final Duration? time;
 
   SplashModule({
-    required this.action,
+    this.action,
     required this.logo,
     required this.route,
-    required this.time,
+    this.time,
   });
 
   @override
