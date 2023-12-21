@@ -5,17 +5,21 @@ import 'package:splash_module_flutter/app/controllers/splash_controller.dart';
 class SplashPage extends StatefulWidget {
   final SplashController controller;
 
-  final Function? action;
+  final Color? color;
   final String logo;
+
   final String route;
   final Duration? time;
+
+  final Function? action;
 
   const SplashPage(
     this.controller, {
     super.key,
-    this.action,
     required this.logo,
     required this.route,
+    this.color,
+    this.action,
     this.time,
   });
 
@@ -27,9 +31,9 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     widget.controller.init(
-      widget.action,
       widget.route,
       widget.time,
+      widget.action,
     );
 
     super.initState();
@@ -40,6 +44,7 @@ class _SplashPageState extends State<SplashPage> {
     final Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: widget.color ?? Colors.black54,
       body: Center(
         child: SvgPicture.asset(
           widget.logo,

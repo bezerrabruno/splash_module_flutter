@@ -1,18 +1,24 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:splash_module_flutter/app/controllers/splash_controller.dart';
 import 'package:splash_module_flutter/app/pages/splash_page.dart';
 
+/// Modulo Splash, logo and route requireds.
 class SplashModule extends Module {
-  final Function? action;
+  final Color? color;
   final String logo;
+
   final String route;
   final Duration? time;
 
+  final Function? action;
+
   SplashModule({
-    this.action,
+    this.color,
     required this.logo,
     required this.route,
     this.time,
+    this.action,
   });
 
   @override
@@ -28,10 +34,11 @@ class SplashModule extends Module {
       '/',
       child: (_) => SplashPage(
         Modular.get<SplashController>(),
-        action: action,
         logo: logo,
         route: route,
+        color: color,
         time: time,
+        action: action,
       ),
     );
 

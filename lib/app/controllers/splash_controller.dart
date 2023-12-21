@@ -2,9 +2,9 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 class SplashController {
   init(
-    Function? action,
     String route,
     Duration? time,
+    Function? action,
   ) async {
     await Future.delayed(time ?? const Duration(seconds: 2));
 

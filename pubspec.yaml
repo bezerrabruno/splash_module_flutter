@@ -1,10 +1,10 @@
 name: splash_module_flutter
-description: Modui.
-version: 0.8.0
-homepage:
+description: Modulo Splash generico.
+version: 1.0.0
+homepage: none
 
 environment:
-  sdk: '>=3.1.5 <4.0.0'
+  sdk: '>=3.2.3 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
